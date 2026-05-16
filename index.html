@@ -16,7 +16,13 @@
             font-family: Arial;
             text-align: center;
             margin: 0;
+            transition: 0.5s;
         }
+
+.light-mode{
+    background-color: white;
+    color: black;
+}
 
         /* NAVBAR */
 
@@ -91,6 +97,7 @@
             background-color: orange;
             transform: scale(1.1);
         }
+
 
         /* SKILLS */
 
@@ -171,6 +178,10 @@
         </div>
 
     </div>
+
+<button onclick="toggleMode()">
+    Change Theme 🌙
+</button>
 
     <!-- HOME -->
 
@@ -272,6 +283,12 @@
         function showMessage(){
             alert("Thanks for visiting Vaibhav's Website 🚀");
         }
+
+function toggleMode(){
+
+    document.body.classList.toggle("light-mode");
+
+}
 
     </script>
 
