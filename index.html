@@ -299,6 +299,10 @@ letter-spacing: 1px;
     Change Theme 🌙
 </button>
 
+<button onclick="changeText()">
+    Change About Text 😎
+</button>
+
     <!-- HOME -->
 
     <h1 class="typing-text">
@@ -313,10 +317,10 @@ letter-spacing: 1px;
 
         <h2>About Me</h2>
 
-        <p>
-            My name is Vaibhav Mishra. <br>
-            I am learning web development and GitHub.
-        </p>
+    <p id="about-text">
+My name is Vaibhav Mishra.
+I am learning web development and GitHub.
+</p>
 
     </section>
 
@@ -405,6 +409,13 @@ letter-spacing: 1px;
 function toggleMode(){
 
     document.body.classList.toggle("light-mode");
+
+}
+
+function changeText(){
+
+    document.getElementById("about-text").innerHTML =
+    "I will become a successful Frontend Developer 🚀";
 
 }
 
