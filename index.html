@@ -322,6 +322,10 @@ My name is Vaibhav Mishra.
 I am learning web development and GitHub.
 </p>
 
+<button onclick="toggleAbout()">
+    Hide / Show About 👀
+</button>
+
     </section>
 
     <!-- GOAL -->
@@ -370,6 +374,7 @@ I am learning web development and GitHub.
             Contact Me
         </button>
 
+
         <div class="social-links">
 
             <a href="https://github.com/" target="_blank">
@@ -416,6 +421,24 @@ function changeText(){
 
     document.getElementById("about-text").innerHTML =
     "I will become a successful Frontend Developer 🚀";
+
+}
+
+function toggleAbout(){
+
+    let text = document.getElementById("about-text");
+
+    if(text.style.display === "none"){
+
+        text.style.display = "block";
+
+    }
+
+    else{
+
+        text.style.display = "none";
+
+    }
 
 }
 
