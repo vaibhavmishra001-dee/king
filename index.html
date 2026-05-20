@@ -127,6 +127,17 @@
 
 }
 
+.hidden{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
         /* NAVBAR */
 
         .navbar{
@@ -315,6 +326,8 @@ letter-spacing: 1px;
 
     <section id="about">
 
+        <section id="about" class="hidden"></section>
+
         <h2>About Me</h2>
 
     <p id="about-text">
@@ -332,6 +345,8 @@ I am learning web development and GitHub.
 
     <section id="goal">
 
+        <section id="goal" class="hidden"></section>
+
         <h2>My Goal</h2>
 
         <p>
@@ -343,6 +358,8 @@ I am learning web development and GitHub.
     <!-- SKILLS -->
 
     <section id="skills">
+
+        <section id="skills" class="hidden"></section>
 
         <h2>My Skills</h2>
 
@@ -367,6 +384,8 @@ I am learning web development and GitHub.
     <!-- CONTACT -->
 
     <section id="contact">
+
+        <section id="contact" class="hidden"></section>
 
         <h2>Contact Me</h2>
 
@@ -441,6 +460,22 @@ function toggleAbout(){
     }
 
 }
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+window.addEventListener('scroll', () => {
+
+    hiddenElements.forEach((el) => {
+
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+
+    });
+
+});
 
     </script>
 
